@@ -25,18 +25,24 @@ export const education = [
     place: "Rochester, NY",
     date: "May 2026",
     degree: "Master of Business Administration",
-    detail:
-      "STEM-designated program. Major: Product Management. Minor: Tech & Ops, Strategy & Pricing.",
-    result: "CGPA 3.77 / 4.0",
-    note: "Beta Gamma Sigma prize recipient for top 20% CGPA",
+    points: [
+      "STEM-designated program",
+      "Major: Product Management",
+      "Minor: Tech & Ops, Strategy & Pricing",
+      "CGPA 3.77 / 4.0",
+      "Beta Gamma Sigma prize for top 20% CGPA",
+    ],
   },
   {
     school: "Vellore Institute of Technology",
     place: "India",
     date: "Jun 2021",
     degree: "Bachelor of Technology, Computer Science & Engineering",
-    detail: "CGPA 9.4 / 10. Ranked among the top 1% of Computer Science students.",
-    note: "Program Representative, Computer Science Branch",
+    points: [
+      "CGPA 9.4 / 10",
+      "Ranked among the top 1% of Computer Science students",
+      "Program Representative, Computer Science Branch",
+    ],
   },
 ];
 

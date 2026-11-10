@@ -319,9 +319,11 @@ export default function App() {
                     </div>
                     <h3>{school.school}</h3>
                     <p className="edu-degree">{school.degree}</p>
-                    <p>{school.detail}</p>
-                    {school.result ? <p className="edu-result">{school.result}</p> : null}
-                    <p className="edu-note">{school.note}</p>
+                    <ul>
+                      {school.points.map((point) => (
+                        <li key={point}>{point}</li>
+                      ))}
+                    </ul>
                   </article>
                 ))}
               </div>
