@@ -770,14 +770,15 @@ h1 {
 }
 
 .edu-list {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 12px;
-  height: 100%;
+  align-self: stretch;
 }
 
 .edu {
-  height: 100%;
+  flex: 1 1 0;
+  min-height: 0;
 }
 
 .edu-top,
@@ -1175,8 +1176,9 @@ h1 {
     grid-template-columns: 1fr;
   }
 
-  .edu-list {
-    height: auto;
+  .edu {
+    flex: none;
+    min-height: auto;
   }
 
   .role-when,
