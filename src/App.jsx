@@ -281,21 +281,6 @@ export default function App() {
               </dl>
             </aside>
           </div>
-
-          <div className="wrap">
-            <p className="strip-label">VelSol Vision · current product</p>
-            <div className="metrics" aria-label="VelSol Vision figures">
-              {heroMetrics.map((metric) => (
-                <div className="metric" key={metric.label}>
-                  <p className="metric-value">{metric.value}</p>
-                  <p className="metric-label">{metric.label}</p>
-                  <p className={metric.detail === "Target" ? "metric-detail alert" : "metric-detail"}>
-                    {metric.detail}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
         </section>
 
         <section id="about" className="section" data-section>
@@ -353,6 +338,20 @@ export default function App() {
                 Three roles — Velocitor Solutions, CData Software, and Societe Generale.
               </p>
             </header>
+            <div className="experience-metrics">
+              <p className="strip-label">VelSol Vision · current product</p>
+              <div className="metrics" aria-label="VelSol Vision figures">
+                {heroMetrics.map((metric) => (
+                  <div className="metric" key={metric.label}>
+                    <p className="metric-value">{metric.value}</p>
+                    <p className="metric-label">{metric.label}</p>
+                    <p className={metric.detail === "Target" ? "metric-detail alert" : "metric-detail"}>
+                      {metric.detail}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
             <div className="roles">
               {roles.map((role) => (
                 <article className="role" key={`${role.org}-${role.dates}`} data-reveal>

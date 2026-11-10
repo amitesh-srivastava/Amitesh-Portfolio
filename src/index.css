@@ -604,12 +604,16 @@ h1 {
 
 .strip-label {
   position: relative;
-  margin: 34px 0 10px;
+  margin: 0 0 10px;
   font-family: var(--display);
   letter-spacing: 0.18em;
   text-transform: uppercase;
   font-size: 13px;
   color: var(--faint);
+}
+
+.experience-metrics {
+  margin-bottom: 36px;
 }
 
 .metrics {
