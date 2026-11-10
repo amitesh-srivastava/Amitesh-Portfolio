@@ -801,17 +801,18 @@ h1 {
 }
 
 .edu ul {
-  margin: 14px 0 0;
+  margin: 10px 0 0;
   padding: 0;
   list-style: none;
 }
 
 .edu li {
   position: relative;
-  margin: 0 0 8px;
+  margin: 0 0 6px;
   padding-left: 16px;
   color: var(--muted);
-  font-size: 15.5px;
+  font-size: 15px;
+  line-height: 1.35;
 }
 
 .edu li::before {
