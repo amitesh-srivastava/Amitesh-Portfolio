@@ -221,10 +221,10 @@ export default function App() {
                 fintech. Roadmaps, backlog strategy, and Agile delivery, with a record of cutting
                 manual work.
               </p>
-              <div className="shift rise d4" aria-label="From software engineer to product management">
+              <div className="shift rise d4" aria-label="From software engineering to product management">
                 <span className="shift-kicker">From</span>
                 <span className="shift-kicker shift-kicker-now">To</span>
-                <strong className="shift-role">Software Engineer</strong>
+                <strong className="shift-role">Software Engineering</strong>
                 <div className="shift-track" aria-hidden="true">
                   <span className="shift-line" />
                   <svg className="shift-head" width="16" height="16" viewBox="0 0 14 14">
