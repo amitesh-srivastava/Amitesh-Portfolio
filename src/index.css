@@ -413,20 +413,22 @@ h1 {
 
 .shift {
   flex: 1;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto minmax(72px, 1fr) auto;
+  grid-template-areas:
+    "from . to"
+    "engineer arrow product";
+  column-gap: 18px;
+  row-gap: 8px;
   align-items: center;
-  gap: 16px;
+  align-content: center;
+  width: 100%;
   max-width: 36rem;
   margin-top: 28px;
 }
 
-.shift-end {
-  margin: 0;
-  flex: none;
-}
-
-.shift-end span {
-  display: block;
+.shift-kicker {
+  grid-area: from;
   color: var(--faint);
   font-family: var(--display);
   font-weight: 600;
@@ -435,9 +437,12 @@ h1 {
   text-transform: uppercase;
 }
 
-.shift-end strong {
-  display: block;
-  margin-top: 4px;
+.shift-kicker-now {
+  grid-area: to;
+}
+
+.shift-role {
+  grid-area: engineer;
   font-family: var(--display);
   font-weight: 700;
   font-size: 26px;
@@ -447,48 +452,34 @@ h1 {
   color: var(--muted);
 }
 
-.shift-end-now strong {
+.shift-role-now {
+  grid-area: product;
   color: var(--ink);
 }
 
 .shift-track {
+  grid-area: arrow;
   position: relative;
-  flex: 1;
+  height: 16px;
   min-width: 72px;
-  height: 22px;
 }
 
 .shift-line {
   position: absolute;
   left: 0;
-  right: 12px;
+  right: 14px;
   top: 50%;
   height: 2px;
-  background: linear-gradient(90deg, rgba(244, 240, 230, 0.28), var(--red));
-  overflow: hidden;
-}
-
-.shift-line::after {
-  content: "";
-  position: absolute;
-  top: -4px;
-  width: 36%;
-  height: 10px;
-  background: linear-gradient(90deg, transparent, #fff 70%, transparent);
-  animation: shift-run 1.6s linear infinite;
+  transform: translateY(-50%);
+  background: var(--red);
 }
 
 .shift-head {
   position: absolute;
   top: 50%;
-  right: -2px;
+  right: 0;
   color: var(--red);
   transform: translateY(-50%);
-}
-
-@keyframes shift-run {
-  from { left: -40%; }
-  to { left: 110%; }
 }
 
 .hero-actions {
@@ -1262,7 +1253,7 @@ h1 {
     margin: 28px 0 4px;
   }
 
-  .shift-end strong {
+  .shift-role {
     font-size: 22px;
   }
 
@@ -1325,17 +1316,22 @@ h1 {
 
 @media (max-width: 640px) {
   .shift {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+    grid-template-columns: auto;
+    grid-template-areas:
+      "from"
+      "engineer"
+      "arrow"
+      "to"
+      "product";
+    row-gap: 6px;
+    justify-items: start;
   }
 
   .shift-track {
-    flex: none;
     width: 16px;
-    height: 34px;
+    height: 28px;
     min-width: 0;
-    margin-left: 8px;
+    margin-left: 6px;
   }
 
   .shift-line {
@@ -1343,30 +1339,17 @@ h1 {
     right: auto;
     top: 0;
     width: 2px;
-    height: calc(100% - 14px);
+    height: calc(100% - 12px);
     transform: translateX(-50%);
-    background: linear-gradient(180deg, rgba(244, 240, 230, 0.28), var(--red));
-  }
-
-  .shift-line::after {
-    left: -4px;
-    width: 10px;
-    height: 40%;
-    animation-name: shift-run-down;
   }
 
   .shift-head {
     top: auto;
     right: auto;
-    bottom: -2px;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%) rotate(90deg);
   }
-}
-
-@keyframes shift-run-down {
-  from { top: -40%; }
-  to { top: 110%; }
 }
 
 @media (max-width: 560px) {
