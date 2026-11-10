@@ -271,7 +271,12 @@ export default function App() {
                 </div>
                 <div>
                   <dt>Products</dt>
-                  <dd>VelSol Vision, Vision AI, V-Hub</dd>
+                  <dd className="product-list">
+                    <span>VelSol Vision, Vision AI, V-Hub</span>
+                    <span>Traction · ATD</span>
+                    <span>Mstars · Kimball</span>
+                    <span>MSS · Labcorp</span>
+                  </dd>
                 </div>
               </dl>
             </aside>

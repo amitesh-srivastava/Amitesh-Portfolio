@@ -590,6 +590,12 @@ h1 {
   font-weight: 500;
 }
 
+.product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
 .strip-label {
   position: relative;
   margin: 34px 0 10px;
