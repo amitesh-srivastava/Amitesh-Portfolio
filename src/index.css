@@ -661,8 +661,19 @@ h1 {
 }
 
 .section {
+  position: relative;
   padding: 84px 0 20px;
   scroll-margin-top: calc(var(--nav) + 12px);
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, var(--red) 0 64px, var(--line-strong) 64px);
 }
 
 .section-head {
