@@ -361,7 +361,12 @@ input {
   display: grid;
   grid-template-columns: minmax(0, 1.45fr) minmax(240px, 320px);
   gap: 36px;
-  align-items: start;
+  align-items: stretch;
+}
+
+.hero-copy {
+  display: flex;
+  flex-direction: column;
 }
 
 .kicker {
@@ -410,7 +415,8 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 26px;
+  margin-top: auto;
+  padding-top: 26px;
 }
 
 .hero-prior {
