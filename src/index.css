@@ -728,7 +728,7 @@ h1 {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   gap: 28px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .recog {
@@ -771,7 +771,13 @@ h1 {
 
 .edu-list {
   display: grid;
+  grid-template-rows: 1fr 1fr;
   gap: 12px;
+  height: 100%;
+}
+
+.edu {
+  height: 100%;
 }
 
 .edu-top,
@@ -1156,6 +1162,10 @@ h1 {
   .skill-grid,
   .channels {
     grid-template-columns: 1fr;
+  }
+
+  .edu-list {
+    height: auto;
   }
 
   .role-when,

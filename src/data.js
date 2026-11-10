@@ -47,7 +47,7 @@ export const recognition = [
   },
   {
     title: "Teach for Vellore",
-    text: "Founded the social initiative and mentored 10+ team members, improving onboarding effectiveness, business unit efficiency, and collaborative team productivity.",
+    text: "Took over the second initiative. Founded the Instagram page and grew it to 4K+ followers in 6 months.",
   },
 ];
 
