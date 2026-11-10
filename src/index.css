@@ -670,9 +670,10 @@ h1 {
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
+  left: 50%;
+  width: min(var(--max), calc(100% - 40px));
   height: 1px;
+  transform: translateX(-50%);
   background: linear-gradient(90deg, var(--red) 0 64px, var(--line-strong) 64px);
 }
 
@@ -1199,7 +1200,8 @@ h1 {
     font-size: clamp(58px, 16vw, 92px);
   }
 
-  .wrap {
+  .wrap,
+  .section::before {
     width: min(var(--max), calc(100% - 28px));
   }
 
