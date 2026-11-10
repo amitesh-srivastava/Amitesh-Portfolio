@@ -228,7 +228,7 @@ export default function App() {
                 <div className="shift-track" aria-hidden="true">
                   <span className="shift-line" />
                   <svg className="shift-head" width="16" height="16" viewBox="0 0 14 14">
-                    <path d="M2 7h10M8 3l4 4-4 4" fill="none" stroke="currentColor" strokeWidth="1.6" />
+                    <path d="M-8 7h20M8 3l4 4-4 4" fill="none" stroke="currentColor" strokeWidth="1.8" />
                   </svg>
                 </div>
                 <strong className="shift-role shift-role-now">Product Management</strong>

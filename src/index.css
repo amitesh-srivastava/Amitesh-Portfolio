@@ -467,19 +467,36 @@ h1 {
 .shift-line {
   position: absolute;
   left: 0;
-  right: 14px;
+  right: 7px;
   top: 50%;
   height: 2px;
   transform: translateY(-50%);
   background: var(--red);
+  overflow: hidden;
+}
+
+.shift-line::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  width: 34%;
+  height: 10px;
+  background: linear-gradient(90deg, transparent, #fff 60%, transparent);
+  animation: shift-run 1.6s linear infinite;
 }
 
 .shift-head {
   position: absolute;
   top: 50%;
   right: 0;
+  overflow: visible;
   color: var(--red);
   transform: translateY(-50%);
+}
+
+@keyframes shift-run {
+  from { left: -40%; }
+  to { left: 120%; }
 }
 
 .hero-actions {
@@ -1339,8 +1356,16 @@ h1 {
     right: auto;
     top: 0;
     width: 2px;
-    height: calc(100% - 12px);
+    height: calc(100% - 6px);
     transform: translateX(-50%);
+  }
+
+  .shift-line::after {
+    left: -4px;
+    top: auto;
+    width: 10px;
+    height: 34%;
+    animation-name: shift-run-down;
   }
 
   .shift-head {
@@ -1350,6 +1375,11 @@ h1 {
     left: 50%;
     transform: translateX(-50%) rotate(90deg);
   }
+}
+
+@keyframes shift-run-down {
+  from { top: -40%; }
+  to { top: 120%; }
 }
 
 @media (max-width: 560px) {
