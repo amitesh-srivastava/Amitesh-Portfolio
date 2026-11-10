@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import portrait from "./assets/amitesh.jpg";
 import {
   certifications,
   education,
@@ -235,16 +234,8 @@ export default function App() {
               </p>
             </div>
 
-            <aside className="dossier rise d3" aria-label="Amitesh Srivastava, current role">
+            <aside className="dossier rise d3" aria-label="Current role">
               <div className="scan" aria-hidden="true" />
-              <figure className="agent">
-                <img src={portrait} alt="Portrait of Amitesh Srivastava" />
-                <span className="agent-corners" aria-hidden="true" />
-                <figcaption>
-                  <span>Operator</span>
-                  <strong>Amitesh Srivastava</strong>
-                </figcaption>
-              </figure>
               <div className="dossier-top">
                 <span>File / 01</span>
                 <span className="status">
