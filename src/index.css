@@ -411,6 +411,86 @@ h1 {
   font-size: 18px;
 }
 
+.shift {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 36rem;
+  margin-top: 28px;
+}
+
+.shift-end {
+  margin: 0;
+  flex: none;
+}
+
+.shift-end span {
+  display: block;
+  color: var(--faint);
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.shift-end strong {
+  display: block;
+  margin-top: 4px;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 26px;
+  letter-spacing: 0.02em;
+  line-height: 0.9;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.shift-end-now strong {
+  color: var(--ink);
+}
+
+.shift-track {
+  position: relative;
+  flex: 1;
+  min-width: 72px;
+  height: 22px;
+}
+
+.shift-line {
+  position: absolute;
+  left: 0;
+  right: 12px;
+  top: 50%;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(244, 240, 230, 0.28), var(--red));
+  overflow: hidden;
+}
+
+.shift-line::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  width: 36%;
+  height: 10px;
+  background: linear-gradient(90deg, transparent, #fff 70%, transparent);
+  animation: shift-run 1.6s linear infinite;
+}
+
+.shift-head {
+  position: absolute;
+  top: 50%;
+  right: -2px;
+  color: var(--red);
+  transform: translateY(-50%);
+}
+
+@keyframes shift-run {
+  from { left: -40%; }
+  to { left: 110%; }
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -1177,6 +1257,15 @@ h1 {
     grid-template-columns: 1fr;
   }
 
+  .shift {
+    flex: none;
+    margin: 28px 0 4px;
+  }
+
+  .shift-end strong {
+    font-size: 22px;
+  }
+
   .edu {
     flex: none;
     min-height: auto;
@@ -1232,6 +1321,52 @@ h1 {
   .section {
     padding-top: 64px;
   }
+}
+
+@media (max-width: 640px) {
+  .shift {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .shift-track {
+    flex: none;
+    width: 16px;
+    height: 34px;
+    min-width: 0;
+    margin-left: 8px;
+  }
+
+  .shift-line {
+    left: 50%;
+    right: auto;
+    top: 0;
+    width: 2px;
+    height: calc(100% - 14px);
+    transform: translateX(-50%);
+    background: linear-gradient(180deg, rgba(244, 240, 230, 0.28), var(--red));
+  }
+
+  .shift-line::after {
+    left: -4px;
+    width: 10px;
+    height: 40%;
+    animation-name: shift-run-down;
+  }
+
+  .shift-head {
+    top: auto;
+    right: auto;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+  }
+}
+
+@keyframes shift-run-down {
+  from { top: -40%; }
+  to { top: 110%; }
 }
 
 @media (max-width: 560px) {

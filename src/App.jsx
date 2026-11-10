@@ -221,6 +221,22 @@ export default function App() {
                 fintech. Roadmaps, backlog strategy, and Agile delivery, with a record of cutting
                 manual work.
               </p>
+              <div className="shift rise d4" aria-label="From software engineer to product management">
+                <p className="shift-end">
+                  <span>From</span>
+                  <strong>Software Engineer</strong>
+                </p>
+                <div className="shift-track" aria-hidden="true">
+                  <span className="shift-line" />
+                  <svg className="shift-head" width="16" height="16" viewBox="0 0 14 14">
+                    <path d="M2 7h10M8 3l4 4-4 4" fill="none" stroke="currentColor" strokeWidth="1.6" />
+                  </svg>
+                </div>
+                <p className="shift-end shift-end-now">
+                  <span>To</span>
+                  <strong>Product Management</strong>
+                </p>
+              </div>
               <div className="hero-actions rise d4">
                 <a className="btn btn-hot" href="#work">
                   Selected work <Arrow />
