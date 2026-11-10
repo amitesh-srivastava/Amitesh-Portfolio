@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import portrait from "./assets/amitesh.jpg";
+import portrait from "./assets/amitesh.png";
 import {
   certifications,
   education,
