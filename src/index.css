@@ -359,9 +359,9 @@ input {
 .hero-grid {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.8fr);
+  grid-template-columns: minmax(0, 1.45fr) minmax(240px, 320px);
   gap: 36px;
-  align-items: end;
+  align-items: start;
 }
 
 .kicker {
@@ -426,7 +426,92 @@ h1 {
   background: linear-gradient(180deg, #1a2029, #12161c);
   border: 1px solid var(--line-strong);
   clip-path: var(--cut);
-  padding: 22px 22px 18px;
+  padding: 0 0 16px;
+}
+
+.agent {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+}
+
+.agent img {
+  display: block;
+  width: 100%;
+  height: 248px;
+  object-fit: cover;
+  object-position: center 16%;
+  filter: saturate(0.78) contrast(1.06) brightness(0.92);
+}
+
+.agent::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(9, 11, 14, 0.18), transparent 28%),
+    linear-gradient(115deg, rgba(255, 70, 85, 0.28), transparent 36%),
+    linear-gradient(180deg, transparent 48%, rgba(9, 11, 14, 0.2) 68%, rgba(9, 11, 14, 0.92) 100%);
+  pointer-events: none;
+}
+
+.agent-corners {
+  position: absolute;
+  inset: 12px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.agent-corners::before,
+.agent-corners::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--red);
+}
+
+.agent-corners::before {
+  top: 0;
+  left: 0;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.agent-corners::after {
+  right: 0;
+  bottom: 0;
+  border-left: 0;
+  border-top: 0;
+}
+
+.agent figcaption {
+  position: absolute;
+  left: 16px;
+  right: 36px;
+  bottom: 16px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.agent figcaption span {
+  color: var(--red);
+  font-family: var(--display);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.agent figcaption strong {
+  font-family: var(--display);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 0.9;
+  text-transform: uppercase;
 }
 
 .scan {
@@ -452,6 +537,10 @@ h1 {
   color: var(--faint);
 }
 
+.dossier-top {
+  padding: 16px 22px 0;
+}
+
 .status {
   color: var(--ink);
   justify-content: flex-end;
@@ -467,7 +556,7 @@ h1 {
 }
 
 .dossier h2 {
-  margin: 18px 0 8px;
+  margin: 14px 22px 8px;
   font-family: var(--display);
   font-size: 40px;
   line-height: 0.9;
@@ -476,7 +565,7 @@ h1 {
 }
 
 .file {
-  margin: 8px 0 0;
+  margin: 8px 22px 0;
 }
 
 .file div {
